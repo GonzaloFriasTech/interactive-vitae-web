@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Vitae — Your career reimagined</title>
+  <meta name="description" content="Interactive Vitae crea CVs interactivos con inteligencia artificial que hacen que tu carrera destaque. Presentá tu perfil profesional de una manera que nunca antes fue posible." />
+  <meta property="og:title" content="Interactive Vitae — Your career reimagined" />
+  <meta property="og:description" content="CVs interactivos con IA para profesionales que quieren destacar." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo.png" />
+  <link rel="icon" type="image/png" href="logo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================
+       NAVBAR
+       ============================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo" aria-label="Interactive Vitae">
+        <img src="logo.png" alt="Interactive Vitae" />
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#que-es" data-i18n="nav.que-es">Qué es</a></li>
+        <li><a href="#que-buscamos" data-i18n="nav.para-quien">Para quién</a></li>
+        <li><a href="#casos" data-i18n="nav.casos">Casos</a></li>
+        <li><a href="#contacto" class="nav-cta" data-i18n="nav.cta">Quiero el mío</a></li>
+      </ul>
+
+      <div class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="hero" id="inicio">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="container">
+      <div class="hero-inner">
+
+        <img src="logo.png" alt="Interactive Vitae" class="hero-logo fade-in" />
+
+        <span class="hero-badge fade-in fade-in-delay-1">
+          <span class="dot"></span>
+          <span data-i18n="hero.badge">Potenciado por Inteligencia Artificial</span>
+        </span>
+
+        <h1 class="fade-in fade-in-delay-2" data-i18n="hero.title">Your career reimagined</h1>
+
+        <p class="hero-subtitle fade-in fade-in-delay-3" data-i18n="hero.subtitle">
+          Tu perfil no debería ser un documento. Debería ser una experiencia.
+          Creamos CVs interactivos con IA que presentan tu carrera de una
+          manera que los reclutadores no pueden ignorar.
+        </p>
+
+        <div class="hero-actions fade-in fade-in-delay-4">
+          <a href="#contacto" class="btn btn-primary" data-i18n="hero.btn-primary">Quiero mi CV interactivo</a>
+          <a href="#casos" class="btn btn-outline" data-i18n="hero.btn-outline">Ver ejemplos</a>
+        </div>
+
+        <div class="hero-scroll fade-in fade-in-delay-5">
+          <span data-i18n="hero.scroll">Explorar</span>
+          <div class="scroll-line"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       QUE ES INTERACTIVE VITAE
+       ============================================ -->
+  <section class="que-es" id="que-es">
+    <div class="container">
+
+      <div class="que-es-text">
+        <p class="section-label fade-in" data-i18n="que-es.label">✦ IMPULSADO POR IA</p>
+        <h2 class="section-title fade-in fade-in-delay-1" data-i18n="que-es.title">La nueva forma de presentarte ante el mundo.<br /><em>Tu historia. Tu voz. Tu IA.</em></h2>
+        <p class="section-subtitle fade-in fade-in-delay-2" data-i18n="que-es.subtitle">
+          Interactive Vitae cuenta tu historia, aprende de vos y actúa como tu asistente profesional automáticamente. Una herramienta impulsada por IA que te posiciona ante quienes quieren conocerte.
+        </p>
+      </div>
+
+      <div class="que-es-cards">
+        <div class="feature-card fade-in">
+          <div class="feature-icon">✦</div>
+          <h3 data-i18n="que-es.card1.title">Diseño a medida</h3>
+          <p data-i18n="que-es.card1.body">Cada CV se diseña según tu identidad profesional, industria y objetivos.</p>
+        </div>
+        <div class="feature-card accent fade-in fade-in-delay-1">
+          <div class="feature-icon">◈</div>
+          <h3 data-i18n="que-es.card2.title">IA integrada</h3>
+          <p data-i18n="que-es.card2.body">Generamos y optimizamos tu contenido con inteligencia artificial.</p>
+        </div>
+        <div class="feature-card fade-in fade-in-delay-2">
+          <div class="feature-icon">⟡</div>
+          <h3 data-i18n="que-es.card3.title">Interactivo</h3>
+          <p data-i18n="que-es.card3.body">Links, proyectos, métricas y logros presentados de forma visual.</p>
+        </div>
+        <div class="feature-card fade-in fade-in-delay-3">
+          <div class="feature-icon">◎</div>
+          <h3 data-i18n="que-es.card4.title">Siempre online</h3>
+          <p data-i18n="que-es.card4.body">Compartí un link — sin PDFs adjuntos que nadie va a abrir.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       QUE BUSCAMOS
+       ============================================ -->
+  <section class="que-buscamos" id="que-buscamos">
+    <div class="container">
+
+      <p class="section-label fade-in" data-i18n="buscamos.label">Para quién es</p>
+      <h2 class="section-title fade-in fade-in-delay-1" data-i18n="buscamos.title">Profesionales que quieren<br /><em>más que un PDF</em></h2>
+      <p class="section-subtitle fade-in fade-in-delay-2" data-i18n="buscamos.subtitle">
+        No hacemos CVs genéricos. Trabajamos con profesionales que entienden que
+        su imagen online importa y quieren diferenciarse de verdad.
+      </p>
+
+      <div class="buscamos-grid">
+
+        <div class="buscamos-item fade-in">
+          <div class="buscamos-number">01</div>
+          <h3 data-i18n="buscamos.item1.title">Tenés experiencia para mostrar</h3>
+          <p data-i18n="buscamos.item1.body">Trabajás en tu carrera con seriedad y querés que eso se vea de la manera correcta.</p>
+        </div>
+
+        <div class="buscamos-item fade-in fade-in-delay-1">
+          <div class="buscamos-number">02</div>
+          <h3 data-i18n="buscamos.item2.title">Buscás destacar en tu industria</h3>
+          <p data-i18n="buscamos.item2.body">Sabés que la mayoría de los candidatos son similares sobre papel. Querés salir de esa masa.</p>
+        </div>
+
+        <div class="buscamos-item fade-in fade-in-delay-2">
+          <div class="buscamos-number">03</div>
+          <h3 data-i18n="buscamos.item3.title">Valorás la tecnología</h3>
+          <p data-i18n="buscamos.item3.body">Entendés que usar IA en tu posicionamiento profesional no es el futuro — es el presente.</p>
+        </div>
+
+        <div class="buscamos-item fade-in fade-in-delay-1">
+          <div class="buscamos-number">04</div>
+          <h3 data-i18n="buscamos.item4.title">Estás en movimiento</h3>
+          <p data-i18n="buscamos.item4.body">Buscás un nuevo desafío, una promoción o expandir tu red. Querés llegar en modo profesional.</p>
+        </div>
+
+        <div class="buscamos-item fade-in fade-in-delay-2">
+          <div class="buscamos-number">05</div>
+          <h3 data-i18n="buscamos.item5.title">Tu historia merece ser contada bien</h3>
+          <p data-i18n="buscamos.item5.body">Tenés logros y proyectos que en un PDF tradicional quedan perdidos en una lista de bullets.</p>
+        </div>
+
+        <div class="buscamos-item fade-in fade-in-delay-3">
+          <div class="buscamos-number">06</div>
+          <h3 data-i18n="buscamos.item6.title">Querés algo único y tuyo</h3>
+          <p data-i18n="buscamos.item6.body">No templates. No soluciones genéricas. Un CV construido desde cero pensando en vos.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       CASOS DE EXITO
+       ============================================ -->
+  <section class="casos" id="casos">
+    <div class="container">
+
+      <p class="section-label fade-in" data-i18n="casos.label">Casos de éxito</p>
+      <h2 class="section-title fade-in fade-in-delay-1" data-i18n="casos.title">Profesionales que ya<br /><em>reimaginaron su carrera</em></h2>
+      <p class="section-subtitle fade-in fade-in-delay-2" data-i18n="casos.subtitle">
+        Cada CV interactivo es único. Acá podés explorar el trabajo real que hacemos.
+      </p>
+
+      <div class="casos-grid fade-in fade-in-delay-3">
+        <div class="caso-card">
+          <span class="caso-tag" data-i18n="casos.card.tag">Tecnología &amp; Producto</span>
+          <h3>Gonzalo Frías</h3>
+          <p class="caso-role" data-i18n="casos.card.role">Product &amp; Technology Professional</p>
+          <p data-i18n="casos.card.body">
+            Un CV interactivo que refleja la experiencia multidisciplinaria de Gonzalo
+            en producto, tecnología y liderazgo. Diseñado para destacar en un mercado
+            donde la diferenciación importa más que nunca.
+          </p>
+          <a href="https://frias-cv.netlify.app" target="_blank" rel="noopener noreferrer" class="caso-link">
+            <span data-i18n="casos.card.link">Ver CV interactivo</span>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       CONTACTO
+       ============================================ -->
+  <section class="contacto" id="contacto">
+    <div class="container">
+
+      <div class="contacto-text">
+        <p class="section-label fade-in" data-i18n="contacto.label">Contacto</p>
+        <h2 class="section-title fade-in fade-in-delay-1" data-i18n="contacto.title">Empezá a construir<br /><em>tu presencia</em></h2>
+        <p class="section-subtitle fade-in fade-in-delay-2" data-i18n="contacto.subtitle">
+          El mejor momento para reimaginar tu carrera es ahora. Contanos sobre vos
+          y te mostramos cómo podemos presentar tu historia profesional de la mejor manera posible.
+        </p>
+
+        <div class="contacto-highlight fade-in fade-in-delay-3">
+          <p data-i18n="contacto.quote">
+            "La mayoría de los profesionales tienen carreras increíbles.
+            Solo les falta la forma correcta de mostrarlas."
+          </p>
+        </div>
+      </div>
+
+      <div class="contacto-form fade-in fade-in-delay-1">
+        <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contacto" />
+
+          <!-- Honeypot anti-spam -->
+          <div class="form-honeypot">
+            <label>No completar: <input name="bot-field" /></label>
+          </div>
+
+          <div class="form-group">
+            <label for="nombre" data-i18n="contacto.form.nombre-label">Nombre completo</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Tu nombre"
+              data-i18n-placeholder="contacto.form.nombre-placeholder"
+              required
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email" data-i18n="contacto.form.email-label">Email profesional</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="tu@email.com"
+              data-i18n-placeholder="contacto.form.email-placeholder"
+              required
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="industria" data-i18n="contacto.form.industria-label">Industria o rol</label>
+            <input
+              type="text"
+              id="industria"
+              name="industria"
+              placeholder="Ej: Product Manager, Fintech"
+              data-i18n-placeholder="contacto.form.industria-placeholder"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje" data-i18n="contacto.form.mensaje-label">Contanos sobre vos</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              placeholder="¿En qué momento de tu carrera estás? ¿Qué querés lograr?"
+              data-i18n-placeholder="contacto.form.mensaje-placeholder"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="form-submit" data-i18n="contacto.form.submit">Quiero mi CV interactivo →</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="logo.png" alt="Interactive Vitae" />
+      </div>
+      <p class="footer-copy" data-i18n="footer.copy">© 2025 Interactive Vitae. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#que-es" data-i18n="footer.link1">Qué es</a></li>
+        <li><a href="#casos" data-i18n="footer.link2">Casos</a></li>
+        <li><a href="#contacto" data-i18n="footer.link3">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
