@@ -878,7 +878,7 @@ a.caso-card:hover {
    GRACIAS — Thank you page
    ============================================ */
 .gracias-section {
-  min-height: calc(100vh - 72px - 110px);
+  min-height: calc(100vh - 140px);
   display: flex;
   align-items: center;
   justify-content: center;
