@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gracias — Interactive Vitae</title>
+  <meta name="description" content="Gracias por contactarte con Interactive Vitae." />
+  <link rel="icon" type="image/png" href="logo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================
+       NAVBAR
+       ============================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Interactive Vitae">
+        <img src="logo.png" alt="Interactive Vitae" />
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#que-es" data-i18n="nav.que-es">Qué es</a></li>
+        <li><a href="index.html#que-buscamos" data-i18n="nav.para-quien">Para quién</a></li>
+        <li><a href="index.html#casos" data-i18n="nav.casos">Casos</a></li>
+        <li><a href="index.html#contacto" class="nav-cta" data-i18n="nav.cta">Quiero el mío</a></li>
+      </ul>
+
+      <div class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ============================================
+       GRACIAS
+       ============================================ -->
+  <section class="gracias-section">
+    <div class="container">
+      <div class="gracias-content">
+        <h1 data-i18n="gracias.title">¡Gracias por contactarte!</h1>
+        <p data-i18n="gracias.body">Recibimos tu mensaje. Alguien del equipo de Interactive Vitae se va a comunicar con vos a la brevedad.</p>
+        <a href="index.html" class="btn btn-primary" data-i18n="gracias.btn">Volver al inicio</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="logo-white.png" alt="Interactive Vitae" />
+      </div>
+      <p class="footer-copy" data-i18n="footer.copy">© 2025 Interactive Vitae. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="index.html#que-es" data-i18n="footer.link1">Qué es</a></li>
+        <li><a href="index.html#casos" data-i18n="footer.link2">Casos</a></li>
+        <li><a href="index.html#contacto" data-i18n="footer.link3">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

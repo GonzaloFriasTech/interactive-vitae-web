@@ -875,6 +875,37 @@ a.caso-card:hover {
 .fade-in-delay-5 { transition-delay: 0.5s; }
 
 /* ============================================
+   GRACIAS — Thank you page
+   ============================================ */
+.gracias-section {
+  min-height: calc(100vh - 72px - 110px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 0;
+}
+
+.gracias-content {
+  max-width: 560px;
+  text-align: center;
+}
+
+.gracias-content h1 {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  color: var(--text-dark);
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.gracias-content p {
+  font-size: 1.05rem;
+  color: var(--text-medium);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+/* ============================================
    RESPONSIVE — TABLET (≤ 900px)
    ============================================ */
 @media (max-width: 900px) {

@@ -132,6 +132,10 @@ const translations = {
     'footer.link1': 'Qué es',
     'footer.link2': 'Casos',
     'footer.link3': 'Contacto',
+
+    'gracias.title': '¡Gracias por contactarte!',
+    'gracias.body': 'Recibimos tu mensaje. Alguien del equipo de Interactive Vitae se va a comunicar con vos a la brevedad.',
+    'gracias.btn': 'Volver al inicio',
   },
 
   en: {
@@ -201,6 +205,10 @@ const translations = {
     'footer.link1': 'What it is',
     'footer.link2': 'Cases',
     'footer.link3': 'Contact',
+
+    'gracias.title': 'Thank you for reaching out!',
+    'gracias.body': 'We received your message. Someone from the Interactive Vitae team will get back to you shortly.',
+    'gracias.btn': 'Back to home',
   }
 };
 
@@ -252,6 +260,7 @@ document.getElementById('lang-toggle').addEventListener('click', (e) => {
 // ============================================
 (function () {
   const canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
   const ctx = canvas.getContext('2d');
   let nodes = [];
   let animId;
