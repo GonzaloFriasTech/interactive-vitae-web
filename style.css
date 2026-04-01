@@ -882,10 +882,14 @@ a.caso-card:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  padding: 2rem;
 }
 
 .gracias-content {
-  max-width: 560px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
 }
 
