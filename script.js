@@ -90,33 +90,33 @@ const translations = {
     'que-es.card4.title': 'Siempre online',
     'que-es.card4.body': 'Compartí un link — sin PDFs adjuntos que nadie va a abrir.',
 
-    'buscamos.label': 'Para quién es',
-    'buscamos.title': 'Profesionales que quieren<br /><em>más que un PDF</em>',
-    'buscamos.subtitle': 'No hacemos CVs genéricos. Trabajamos con profesionales que entienden que su imagen online importa y quieren diferenciarse de verdad.',
-    'buscamos.item1.title': 'Tenés experiencia para mostrar',
-    'buscamos.item1.body': 'Trabajás en tu carrera con seriedad y querés que eso se vea de la manera correcta.',
-    'buscamos.item2.title': 'Buscás destacar en tu industria',
-    'buscamos.item2.body': 'Sabés que la mayoría de los candidatos son similares sobre papel. Querés salir de esa masa.',
-    'buscamos.item3.title': 'Valorás la tecnología',
-    'buscamos.item3.body': 'Entendés que usar IA en tu posicionamiento profesional no es el futuro — es el presente.',
-    'buscamos.item4.title': 'Estás en movimiento',
-    'buscamos.item4.body': 'Buscás un nuevo desafío, una promoción o expandir tu red. Querés llegar en modo profesional.',
-    'buscamos.item5.title': 'Tu historia merece ser contada bien',
-    'buscamos.item5.body': 'Tenés logros y proyectos que en un PDF tradicional quedan perdidos en una lista de bullets.',
-    'buscamos.item6.title': 'Querés algo único y tuyo',
-    'buscamos.item6.body': 'No templates. No soluciones genéricas. Un CV construido desde cero pensando en vos.',
+    'buscamos.label': 'PARA QUIÉN ES',
+    'buscamos.title': 'El CV evolucionó. ¿Vos también?',
+    'buscamos.subtitle': 'Somos el partner ideal para digitalizar tu perfil, automatizar tu presencia y mostrarte exactamente como sos. Sin límites de un PDF. Sin plantillas genéricas.',
+    'buscamos.item1.title': 'Tu experiencia, expresada por IA',
+    'buscamos.item1.body': 'Un AI Agent cuenta tu historia mejor que cualquier documento',
+    'buscamos.item2.title': 'Diferenciáte del resto',
+    'buscamos.item2.body': 'Destacá tu perfil en tu industria y salí de la masa',
+    'buscamos.item3.title': 'Tecnología de punta',
+    'buscamos.item3.body': 'Usá IA hoy, no cuando sea "el futuro"',
+    'buscamos.item4.title': 'Siempre en movimiento',
+    'buscamos.item4.body': 'Tu perfil online evoluciona con vos',
+    'buscamos.item5.title': 'Tu historia, bien contada',
+    'buscamos.item5.body': 'Logros y proyectos que un PDF nunca podría mostrar',
+    'buscamos.item6.title': '100% único y tuyo',
+    'buscamos.item6.body': 'Construido desde cero. Sin templates. Sin copias',
 
-    'casos.label': 'Casos de éxito',
-    'casos.title': 'Profesionales que ya<br /><em>reimaginaron su carrera</em>',
-    'casos.subtitle': 'Cada CV interactivo es único. Acá podés explorar el trabajo real que hacemos.',
-    'casos.card.tag': 'Tecnología & Producto',
-    'casos.card.role': 'Product & Technology Professional',
-    'casos.card.body': 'Un CV interactivo que refleja la experiencia multidisciplinaria de Gonzalo en producto, tecnología y liderazgo. Diseñado para destacar en un mercado donde la diferenciación importa más que nunca.',
-    'casos.card.link': 'Ver CV interactivo',
+    'casos.label': 'CASOS DE ÉXITO',
+    'casos.title': 'Los que ya dieron el paso',
+    'casos.subtitle': 'Cada perfil, construido a medida. Cada historia, contada con IA.',
+    'casos.card1.role': 'Business Lead & Head of Sales',
+    'casos.card2.role': 'Entrepreneur & Growth Leader',
+    'casos.card3.name': 'Próximamente',
+    'casos.card3.role': 'Tu perfil podría estar acá',
 
     'contacto.label': 'Contacto',
     'contacto.title': 'Empezá a construir<br /><em>tu presencia</em>',
-    'contacto.subtitle': 'El mejor momento para reimaginar tu carrera es ahora. Contanos sobre vos y te mostramos cómo podemos presentar tu historia profesional de la mejor manera posible.',
+    'contacto.subtitle': 'Si te interesa contar con un perfil profesional, inteligente y digital, contactanos.',
     'contacto.quote': '"La mayoría de los profesionales tienen carreras increíbles. Solo les falta la forma correcta de mostrarlas."',
     'contacto.form.nombre-label': 'Nombre completo',
     'contacto.form.nombre-placeholder': 'Tu nombre',
@@ -159,33 +159,33 @@ const translations = {
     'que-es.card4.title': 'Always online',
     'que-es.card4.body': "Share a link — no PDF attachments nobody is going to open.",
 
-    'buscamos.label': "Who it's for",
-    'buscamos.title': 'Professionals who want<br /><em>more than a PDF</em>',
-    'buscamos.subtitle': "We don't make generic CVs. We work with professionals who understand that their online image matters and want to truly stand out.",
-    'buscamos.item1.title': 'You have experience to show',
-    'buscamos.item1.body': 'You take your career seriously and you want that to come through in the right way.',
-    'buscamos.item2.title': 'You want to stand out in your industry',
-    'buscamos.item2.body': 'You know most candidates look similar on paper. You want to break out of that crowd.',
-    'buscamos.item3.title': 'You value technology',
-    'buscamos.item3.body': "You understand that using AI for professional positioning isn't the future — it's the present.",
-    'buscamos.item4.title': "You're on the move",
-    'buscamos.item4.body': "You're looking for a new challenge, a promotion, or to grow your network. You want to show up like a pro.",
-    'buscamos.item5.title': 'Your story deserves to be told well',
-    'buscamos.item5.body': 'You have achievements and projects that get lost in a bullet list in a traditional PDF.',
-    'buscamos.item6.title': 'You want something unique and yours',
-    'buscamos.item6.body': 'No templates. No generic solutions. A CV built from scratch with you in mind.',
+    'buscamos.label': "WHO IT'S FOR",
+    'buscamos.title': 'The CV evolved. Did you?',
+    'buscamos.subtitle': "We're the ideal partner to digitize your profile, automate your presence and show the world exactly who you are. No PDF limits. No generic templates.",
+    'buscamos.item1.title': 'Your experience, told by AI',
+    'buscamos.item1.body': 'An AI Agent tells your story better than any document',
+    'buscamos.item2.title': 'Stand out from the crowd',
+    'buscamos.item2.body': 'Highlight your profile in your industry',
+    'buscamos.item3.title': 'Cutting-edge technology',
+    'buscamos.item3.body': 'Use AI today, not when it becomes "the future"',
+    'buscamos.item4.title': 'Always moving forward',
+    'buscamos.item4.body': 'Your online profile evolves with you',
+    'buscamos.item5.title': 'Your story, told right',
+    'buscamos.item5.body': 'Achievements and projects a PDF could never show',
+    'buscamos.item6.title': '100% unique and yours',
+    'buscamos.item6.body': 'Built from scratch. No templates. No copies.',
 
-    'casos.label': 'Success stories',
-    'casos.title': 'Professionals who already<br /><em>reimagined their career</em>',
-    'casos.subtitle': 'Every interactive CV is unique. Here you can explore the real work we do.',
-    'casos.card.tag': 'Technology & Product',
-    'casos.card.role': 'Product & Technology Professional',
-    'casos.card.body': "An interactive CV that captures Gonzalo's multidisciplinary experience in product, technology and leadership. Designed to stand out in a market where differentiation matters more than ever.",
-    'casos.card.link': 'View interactive CV',
+    'casos.label': 'SUCCESS CASES',
+    'casos.title': 'Those who already took the step',
+    'casos.subtitle': 'Each profile, built to measure. Each story, told with AI.',
+    'casos.card1.role': 'Business Lead & Head of Sales',
+    'casos.card2.role': 'Entrepreneur & Growth Leader',
+    'casos.card3.name': 'Coming soon',
+    'casos.card3.role': 'Your profile could be here',
 
     'contacto.label': 'Contact',
     'contacto.title': 'Start building<br /><em>your presence</em>',
-    'contacto.subtitle': "The best time to reimagine your career is now. Tell us about yourself and we'll show you how we can present your professional story in the best possible way.",
+    'contacto.subtitle': 'If you\'re interested in having a professional, intelligent and digital profile, contact us.',
     'contacto.quote': '"Most professionals have incredible careers. They just need the right way to show them."',
     'contacto.form.nombre-label': 'Full name',
     'contacto.form.nombre-placeholder': 'Your name',
@@ -345,6 +345,36 @@ document.getElementById('lang-toggle').addEventListener('click', (e) => {
   }, { passive: true });
 
   init();
+})();
+
+// ============================================
+// CASOS CAROUSEL — flechas + dots
+// ============================================
+(function () {
+  const scroll = document.querySelector('.casos-scroll');
+  const prevBtn = document.querySelector('.casos-nav--prev');
+  const nextBtn = document.querySelector('.casos-nav--next');
+  const dots = document.querySelectorAll('.caso-dot');
+  if (!scroll || !prevBtn || !nextBtn) return;
+
+  function getCardWidth() {
+    const card = scroll.querySelector('.caso-card');
+    return card ? card.offsetWidth + 24 : 240; // 24 = gap
+  }
+
+  prevBtn.addEventListener('click', () => {
+    scroll.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    scroll.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+  });
+
+  scroll.addEventListener('scroll', () => {
+    const cardW = getCardWidth();
+    const index = Math.round(scroll.scrollLeft / cardW);
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+  }, { passive: true });
 })();
 
 // Init on page load
