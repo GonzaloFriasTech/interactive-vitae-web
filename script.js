@@ -431,7 +431,7 @@ document.getElementById('lang-toggle').addEventListener('click', (e) => {
   const demoBtn       = document.getElementById('demo-btn');
   const uploadBar     = document.getElementById('upload-bar');
   const uploadStatus  = document.getElementById('upload-status');
-  const resultRows    = section.querySelectorAll('.result-row, .result-tag');
+  const resultRows    = section.querySelectorAll('.reveal-item');
 
   let loopTimer = null;
   let paused    = false;
@@ -510,7 +510,7 @@ document.getElementById('lang-toggle').addEventListener('click', (e) => {
       delay += 180;
     });
 
-    loopTimer = setTimeout(runStep1, 3000);
+    loopTimer = setTimeout(runStep1, 4500);
   }
 
   const startObserver = new IntersectionObserver((entries) => {
