@@ -432,6 +432,7 @@ document.getElementById('lang-toggle').addEventListener('click', (e) => {
   const uploadBar     = document.getElementById('upload-bar');
   const uploadStatus  = document.getElementById('upload-status');
   const resultRows    = section.querySelectorAll('.reveal-item');
+  const chatWidget    = document.getElementById('cv-chat-widget');
 
   let loopTimer = null;
   let paused    = false;
@@ -503,12 +504,15 @@ document.getElementById('lang-toggle').addEventListener('click', (e) => {
   function runStep3() {
     setStep(2);
     resultRows.forEach(r => r.classList.remove('revealed'));
+    if (chatWidget) chatWidget.classList.remove('visible');
 
     let delay = 100;
     resultRows.forEach(row => {
       setTimeout(() => row.classList.add('revealed'), delay);
       delay += 180;
     });
+
+    if (chatWidget) setTimeout(() => chatWidget.classList.add('visible'), 1000);
 
     loopTimer = setTimeout(runStep1, 4500);
   }
