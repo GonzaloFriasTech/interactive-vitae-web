@@ -433,9 +433,42 @@ document.getElementById('lang-toggle').addEventListener('click', (e) => {
   const uploadStatus  = document.getElementById('upload-status');
   const resultRows    = section.querySelectorAll('.reveal-item');
   const chatWidget    = document.getElementById('cv-chat-widget');
+  const chatPanel     = document.getElementById('chat-panel');
+  const chatPanelBody = document.getElementById('chat-panel-body');
+  const chatWidgetBtn = document.getElementById('chat-widget-btn');
 
   let loopTimer = null;
   let paused    = false;
+  let step3Gen  = 0;
+
+  function addMsg(type, text, typed, gen) {
+    if (gen !== step3Gen) return;
+    const msg = document.createElement('div');
+    msg.className = 'chat-msg chat-msg-' + type;
+    chatPanelBody.appendChild(msg);
+    chatPanelBody.scrollTop = chatPanelBody.scrollHeight;
+
+    if (!typed) {
+      msg.style.opacity = '0';
+      msg.textContent = text;
+      setTimeout(() => { if (gen === step3Gen) msg.style.opacity = '1'; }, 30);
+      return;
+    }
+
+    const cursor = document.createElement('span');
+    cursor.className = 'chat-typing-cursor';
+    cursor.textContent = '|';
+    msg.appendChild(cursor);
+
+    let i = 0;
+    const speed = type === 'user' ? 45 : 18;
+    const iv = setInterval(() => {
+      if (gen !== step3Gen) { clearInterval(iv); return; }
+      cursor.insertAdjacentText('beforebegin', text[i++]);
+      chatPanelBody.scrollTop = chatPanelBody.scrollHeight;
+      if (i >= text.length) { clearInterval(iv); cursor.remove(); }
+    }, speed);
+  }
 
   function setStep(n) {
     stepEls.forEach((el, i) => el.classList.toggle('active', i === n));
@@ -502,19 +535,60 @@ document.getElementById('lang-toggle').addEventListener('click', (e) => {
   }
 
   function runStep3() {
+    const gen = ++step3Gen;
     setStep(2);
     resultRows.forEach(r => r.classList.remove('revealed'));
-    if (chatWidget) chatWidget.classList.remove('visible');
+    if (chatWidget)    chatWidget.classList.remove('visible');
+    if (chatWidgetBtn) chatWidgetBtn.classList.remove('pulse', 'clicking');
+    if (chatPanel)     chatPanel.classList.remove('open');
+    if (chatPanelBody) chatPanelBody.innerHTML = '';
 
+    // Phase 3A — reveal CV
     let delay = 100;
     resultRows.forEach(row => {
-      setTimeout(() => row.classList.add('revealed'), delay);
+      setTimeout(() => { if (gen === step3Gen) row.classList.add('revealed'); }, delay);
       delay += 180;
     });
 
-    if (chatWidget) setTimeout(() => chatWidget.classList.add('visible'), 1000);
+    // Phase 3B — bubble appears + pulse
+    setTimeout(() => {
+      if (gen !== step3Gen) return;
+      chatWidget.classList.add('visible');
+      setTimeout(() => { if (gen === step3Gen) chatWidgetBtn.classList.add('pulse'); }, 300);
+    }, 1500);
 
-    loopTimer = setTimeout(runStep1, 4500);
+    // Phase 3C — click + open panel
+    setTimeout(() => {
+      if (gen !== step3Gen) return;
+      chatWidgetBtn.classList.remove('pulse');
+      chatWidgetBtn.classList.add('clicking');
+      setTimeout(() => {
+        if (gen !== step3Gen) return;
+        chatWidgetBtn.classList.remove('clicking');
+        chatPanel.classList.add('open');
+
+        // Phase 3D — messages
+        setTimeout(() => {
+          addMsg('ai', "Hi! I'm Juan's personal assistant. How can I help you?", false, gen);
+
+          setTimeout(() => {
+            addMsg('user', "Is Juan a good fit for a DevOps Specialist role?", true, gen);
+
+            setTimeout(() => {
+              addMsg('ai',
+                "Absolutely. Juan has 5+ years of experience in software development. " +
+                "His work at MercadoLibre demonstrates his ability to work in large-scale environments. " +
+                "Strong candidate for a senior technical role.",
+                true, gen);
+            }, 49 * 45 + 500);
+
+          }, 800);
+        }, 300);
+
+      }, 200);
+    }, 2400);
+
+    loopTimer = setTimeout(runStep1, 10500);
   }
 
   const startObserver = new IntersectionObserver((entries) => {
@@ -532,6 +606,7 @@ document.getElementById('lang-toggle').addEventListener('click', (e) => {
     if (document.hidden) {
       paused = true;
       clearTimeout(loopTimer);
+      step3Gen++;
     } else {
       paused = false;
       runStep1();
