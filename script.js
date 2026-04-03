@@ -128,6 +128,21 @@ const translations = {
     'contacto.form.mensaje-placeholder': '¿En qué momento de tu carrera estás? ¿Qué querés lograr?',
     'contacto.form.submit': 'Quiero mi CV interactivo →',
 
+    'como.label': 'CÓMO FUNCIONA',
+    'como.title': 'Tu CV interactivo en 3 pasos',
+    'como.subtitle': 'Así de simple es transformar tu carrera profesional',
+    'como.step1.label': 'Contactanos',
+    'como.step2.label': 'Enviá tu info',
+    'como.step3.label': 'Tu CV listo',
+    'como.step1.card-title': 'Contactanos',
+    'como.step1.field1': 'Nombre',
+    'como.step1.field2': 'Email',
+    'como.step1.field3': 'Industria',
+    'como.step1.btn': 'Enviar →',
+    'como.step2.card-title': 'Enviá tu info',
+    'como.step2.uploading': 'Subiendo...',
+    'como.step3.card-title': 'Tu CV interactivo',
+
     'footer.copy': '© 2025 Interactive Vitae. All rights reserved.',
     'footer.link1': 'Qué es',
     'footer.link2': 'Casos',
@@ -200,6 +215,21 @@ const translations = {
     'contacto.form.mensaje-label': 'Tell us about yourself',
     'contacto.form.mensaje-placeholder': 'Where are you in your career? What do you want to achieve?',
     'contacto.form.submit': 'I want my interactive CV →',
+
+    'como.label': 'HOW IT WORKS',
+    'como.title': 'Your interactive CV in 3 steps',
+    'como.subtitle': "It's that simple to transform your professional career",
+    'como.step1.label': 'Contact us',
+    'como.step2.label': 'Send your info',
+    'como.step3.label': 'CV ready',
+    'como.step1.card-title': 'Contact us',
+    'como.step1.field1': 'Name',
+    'como.step1.field2': 'Email',
+    'como.step1.field3': 'Industry',
+    'como.step1.btn': 'Send →',
+    'como.step2.card-title': 'Send your info',
+    'como.step2.uploading': 'Uploading...',
+    'como.step3.card-title': 'Your interactive CV',
 
     'footer.copy': '© 2025 Interactive Vitae. All rights reserved.',
     'footer.link1': 'What it is',
@@ -384,6 +414,125 @@ document.getElementById('lang-toggle').addEventListener('click', (e) => {
     const index = Math.round(scroll.scrollLeft / cardW);
     dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
   }, { passive: true });
+})();
+
+// ============================================
+// CÓMO FUNCIONA — demo en loop
+// ============================================
+(function () {
+  const section = document.querySelector('.como-funciona');
+  if (!section) return;
+
+  const stepEls       = section.querySelectorAll('.como-step');
+  const panels        = section.querySelectorAll('.como-panel');
+  const typeNombre    = document.getElementById('type-nombre');
+  const typeEmail     = document.getElementById('type-email');
+  const typeIndustria = document.getElementById('type-industria');
+  const demoBtn       = document.getElementById('demo-btn');
+  const uploadBar     = document.getElementById('upload-bar');
+  const uploadStatus  = document.getElementById('upload-status');
+  const resultRows    = section.querySelectorAll('.result-row, .result-tag');
+
+  let loopTimer = null;
+  let paused    = false;
+
+  function setStep(n) {
+    stepEls.forEach((el, i) => el.classList.toggle('active', i === n));
+    panels.forEach((el, i)  => el.classList.toggle('active', i === n));
+  }
+
+  function typeText(el, text, speed, cb) {
+    el.textContent = '';
+    let i = 0;
+    const t = setInterval(() => {
+      el.textContent += text[i++];
+      if (i >= text.length) { clearInterval(t); if (cb) cb(); }
+    }, speed);
+    return t;
+  }
+
+  function runStep1() {
+    setStep(0);
+    typeNombre.textContent    = '';
+    typeEmail.textContent     = '';
+    typeIndustria.textContent = '';
+    demoBtn.classList.remove('visible', 'clicking');
+
+    const speed = 60;
+    typeText(typeNombre, 'Juan Pérez', speed, () => {
+      setTimeout(() => {
+        typeText(typeEmail, 'juan@email.com', speed, () => {
+          setTimeout(() => {
+            typeText(typeIndustria, 'Tecnología', speed, () => {
+              setTimeout(() => {
+                demoBtn.classList.add('visible');
+                setTimeout(() => {
+                  demoBtn.classList.add('clicking');
+                  setTimeout(() => {
+                    demoBtn.classList.remove('clicking');
+                    loopTimer = setTimeout(runStep2, 300);
+                  }, 200);
+                }, 500);
+              }, 300);
+            });
+          }, 200);
+        });
+      }, 200);
+    });
+  }
+
+  function runStep2() {
+    setStep(1);
+    uploadBar.style.width = '0%';
+    if (uploadStatus) uploadStatus.textContent =
+      document.documentElement.lang === 'en' ? 'Uploading...' : 'Subiendo...';
+
+    let progress = 0;
+    const interval = setInterval(() => {
+      progress += 2;
+      uploadBar.style.width = progress + '%';
+      if (progress >= 100) {
+        clearInterval(interval);
+        if (uploadStatus) uploadStatus.textContent =
+          document.documentElement.lang === 'en' ? 'Done!' : '¡Listo!';
+        loopTimer = setTimeout(runStep3, 600);
+      }
+    }, 40);
+  }
+
+  function runStep3() {
+    setStep(2);
+    resultRows.forEach(r => r.classList.remove('revealed'));
+
+    let delay = 100;
+    resultRows.forEach(row => {
+      setTimeout(() => row.classList.add('revealed'), delay);
+      delay += 180;
+    });
+
+    loopTimer = setTimeout(runStep1, 3000);
+  }
+
+  const startObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !paused) {
+        startObserver.unobserve(entry.target);
+        runStep1();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  startObserver.observe(section);
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      paused = true;
+      clearTimeout(loopTimer);
+    } else {
+      paused = false;
+      runStep1();
+    }
+  });
 })();
 
 // Init on page load

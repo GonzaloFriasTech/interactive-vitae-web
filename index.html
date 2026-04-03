@@ -131,6 +131,104 @@
 
 
   <!-- ============================================
+       CÓMO FUNCIONA
+       ============================================ -->
+  <section class="como-funciona" id="como-funciona">
+    <div class="container">
+
+      <div class="como-funciona-header">
+        <p class="section-label fade-in" data-i18n="como.label">CÓMO FUNCIONA</p>
+        <h2 class="section-title fade-in fade-in-delay-1" data-i18n="como.title">Tu CV interactivo en 3 pasos</h2>
+        <p class="section-subtitle fade-in fade-in-delay-2" data-i18n="como.subtitle">Así de simple es transformar tu carrera profesional</p>
+      </div>
+
+      <!-- Indicador de pasos -->
+      <div class="como-steps fade-in fade-in-delay-3" id="como-steps">
+        <div class="como-step active" data-step="1">
+          <div class="step-circle">1</div>
+          <span class="step-label" data-i18n="como.step1.label">Contactanos</span>
+        </div>
+        <div class="como-connector"></div>
+        <div class="como-step" data-step="2">
+          <div class="step-circle">2</div>
+          <span class="step-label" data-i18n="como.step2.label">Enviá tu info</span>
+        </div>
+        <div class="como-connector"></div>
+        <div class="como-step" data-step="3">
+          <div class="step-circle">3</div>
+          <span class="step-label" data-i18n="como.step3.label">Tu CV listo</span>
+        </div>
+      </div>
+
+      <!-- Card de demo -->
+      <div class="como-card fade-in fade-in-delay-4">
+
+        <!-- Panel 1: Formulario -->
+        <div class="como-panel active" id="panel-1">
+          <h3 class="como-card-title" data-i18n="como.step1.card-title">Contactanos</h3>
+          <div class="demo-form">
+            <div class="demo-field">
+              <label data-i18n="como.step1.field1">Nombre</label>
+              <div class="demo-input"><span class="typed-text" id="type-nombre"></span><span class="demo-cursor">|</span></div>
+            </div>
+            <div class="demo-field">
+              <label data-i18n="como.step1.field2">Email</label>
+              <div class="demo-input"><span class="typed-text" id="type-email"></span><span class="demo-cursor">|</span></div>
+            </div>
+            <div class="demo-field">
+              <label data-i18n="como.step1.field3">Industria</label>
+              <div class="demo-input"><span class="typed-text" id="type-industria"></span><span class="demo-cursor">|</span></div>
+            </div>
+            <button class="demo-submit" id="demo-btn" data-i18n="como.step1.btn">Enviar →</button>
+          </div>
+        </div>
+
+        <!-- Panel 2: Upload -->
+        <div class="como-panel" id="panel-2">
+          <h3 class="como-card-title" data-i18n="como.step2.card-title">Enviá tu info</h3>
+          <div class="demo-upload">
+            <div class="upload-zone" id="upload-zone">
+              <div class="upload-file-icon">
+                <svg width="40" height="48" viewBox="0 0 40 48" fill="none">
+                  <rect width="40" height="48" rx="6" fill="#e8e0d5"/>
+                  <rect x="6" y="20" width="28" height="3" rx="1.5" fill="#1a2f6e" opacity="0.3"/>
+                  <rect x="6" y="27" width="22" height="3" rx="1.5" fill="#1a2f6e" opacity="0.2"/>
+                  <rect x="6" y="34" width="16" height="3" rx="1.5" fill="#1a2f6e" opacity="0.15"/>
+                  <rect x="6" y="10" width="18" height="3" rx="1.5" fill="#2563eb" opacity="0.6"/>
+                </svg>
+              </div>
+              <span class="upload-filename">curriculum.pdf</span>
+              <div class="upload-progress-track">
+                <div class="upload-progress-bar" id="upload-bar"></div>
+              </div>
+              <span class="upload-status" id="upload-status" data-i18n="como.step2.uploading">Subiendo...</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3: Resultado -->
+        <div class="como-panel" id="panel-3">
+          <h3 class="como-card-title" data-i18n="como.step3.card-title">Tu CV interactivo</h3>
+          <div class="demo-result" id="demo-result">
+            <div class="result-row result-header"></div>
+            <div class="result-row result-wide"></div>
+            <div class="result-row result-mid"></div>
+            <div class="result-row result-narrow"></div>
+            <div class="result-row result-wide"></div>
+            <div class="result-tag-row">
+              <div class="result-tag"></div>
+              <div class="result-tag"></div>
+              <div class="result-tag"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
        QUE BUSCAMOS
        ============================================ -->
   <section class="que-buscamos" id="que-buscamos">
