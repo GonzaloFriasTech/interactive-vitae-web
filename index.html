@@ -17,6 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="demo.css" />
 </head>
 <body>
 
@@ -295,6 +296,147 @@
 
 
   <!-- ============================================
+       DEMO ANIMADA
+       ============================================ -->
+  <section id="demo">
+    <p class="demo-eyebrow">Interactive Vitae</p>
+    <h2 class="demo-title">See it in action</h2>
+    <p class="demo-subtitle">Watch your CV come alive</p>
+
+    <div class="demo-progress-bar">
+      <div class="demo-progress-fill" id="demoPF"></div>
+    </div>
+
+    <div class="demo-browser light" id="demoBrowser">
+      <div class="demo-bar light" id="demoBar">
+        <div class="demo-dots">
+          <span class="demo-dot-r"></span>
+          <span class="demo-dot-y"></span>
+          <span class="demo-dot-g"></span>
+        </div>
+        <div class="demo-url light" id="demoUrl">interactivitae.com/juan-perez</div>
+        <div class="demo-hbtns">
+          <div style="position:relative;display:inline-flex;align-items:center;">
+            <button class="demo-guide-btn" id="demoGuideBtn">⊙ AI Guide</button>
+            <div class="demo-touch-ring" id="demoTrGuide" style="top:-5px;left:-5px;width:76px;height:28px;border-radius:20px;"></div>
+          </div>
+          <div style="position:relative;display:inline-flex;align-items:center;">
+            <div class="demo-lang-grp" id="demoLangGrp">
+              <button class="demo-lang-btn active" id="demoEs">ES</button>
+              <button class="demo-lang-btn inactive" id="demoEn">EN</button>
+            </div>
+            <div class="demo-touch-ring" id="demoTrLang" style="top:-5px;left:-5px;width:52px;height:28px;border-radius:20px;"></div>
+          </div>
+          <div style="position:relative;display:inline-flex;align-items:center;">
+            <button class="demo-theme-btn" id="demoThemeBtn">☀</button>
+            <div class="demo-touch-ring" id="demoTrTheme" style="top:-5px;left:-5px;width:30px;height:30px;border-radius:50%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-content light" id="demoContent">
+        <div class="demo-cv-layer">
+
+          <div class="demo-profile-row" id="demoPR">
+            <div class="demo-avatar" id="demoAv">JP</div>
+            <div style="flex:1;">
+              <div class="demo-p-name" id="demoPName">Juan Pérez</div>
+              <div class="demo-p-role" id="demoPRole">Software Developer · Buenos Aires</div>
+              <div style="display:flex;gap:4px;margin-top:3px;flex-wrap:wrap;">
+                <span class="demo-chip light" id="dck1">React</span>
+                <span class="demo-chip light" id="dck2">Node.js</span>
+                <span class="demo-chip light" id="dck3">AI/ML</span>
+              </div>
+            </div>
+            <span class="demo-ai-badge light" id="demoAib">✦ AI-Powered</span>
+          </div>
+
+          <div class="demo-section" id="ds0">
+            <div class="demo-sec-head light" id="dsh0">
+              <span style="font-size:11px;">👤</span>
+              <span class="demo-sec-label light" id="dl0">Sobre mí</span>
+            </div>
+            <div class="demo-exp-card light" id="demoAbout" style="font-size:9px;line-height:1.5;">Software developer with 5+ years building AI-powered web solutions.</div>
+            <div class="guide-tip">Your summary — first impression ✦</div>
+          </div>
+
+          <div class="demo-section" id="ds1">
+            <div class="demo-sec-head light" id="dsh1">
+              <span style="font-size:11px;">💼</span>
+              <span class="demo-sec-label light" id="dl1">Experiencia</span>
+            </div>
+            <div class="demo-exp-card light">Senior Dev — MercadoLibre (2021–Present)</div>
+            <div class="demo-exp-card light">Full-Stack — Globant (2019–2021)</div>
+            <div class="demo-exp-card light">Jr. Developer — Accenture (2017–2019)</div>
+            <div class="guide-tip">Work history — most important ✦</div>
+          </div>
+
+          <div class="demo-section" id="ds2">
+            <div class="demo-sec-head light" id="dsh2">
+              <span style="font-size:11px;">⟨⟩</span>
+              <span class="demo-sec-label light" id="dl2">Skills</span>
+            </div>
+            <div style="display:flex;gap:4px;flex-wrap:wrap;">
+              <span class="demo-chip light" id="dsk1">React</span>
+              <span class="demo-chip light" id="dsk2">TypeScript</span>
+              <span class="demo-chip light" id="dsk3">Node.js</span>
+              <span class="demo-chip light" id="dsk4">Python</span>
+              <span class="demo-chip light" id="dsk5">AI/ML</span>
+            </div>
+            <div class="guide-tip">Top skills — recruiters scan this ✦</div>
+          </div>
+
+          <div class="demo-section" id="ds3">
+            <div class="demo-sec-head light" id="dsh3">
+              <span style="font-size:11px;">📞</span>
+              <span class="demo-sec-label light" id="dl3">Contacto</span>
+            </div>
+            <div style="display:flex;gap:4px;flex-wrap:wrap;">
+              <span class="demo-chip light">LinkedIn</span>
+              <span class="demo-chip light">Download CV</span>
+              <span class="demo-chip light">Contactar</span>
+            </div>
+            <div class="guide-tip">Make it easy to reach you ✦</div>
+          </div>
+
+        </div>
+
+        <!-- Chat panel -->
+        <div class="demo-chat-panel" id="demoChatPanel">
+          <div class="demo-chat-header">
+            <div style="display:flex;align-items:center;gap:5px;">
+              <div class="demo-bot-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a2 2 0 012 2 2 2 0 01-2 2 2 2 0 01-2-2 2 2 0 012-2zm8 7H4a2 2 0 00-2 2v8a2 2 0 002 2h16a2 2 0 002-2v-8a2 2 0 00-2-2zM9 17H7v-5h2v5zm8 0h-2v-5h2v5zm-4 0h-2v-5h2v5z"/></svg>
+              </div>
+              <span style="font-size:10px;font-weight:600;color:#fff;">Juan Pérez Personal Assistant</span>
+            </div>
+            <span class="demo-online">Online</span>
+          </div>
+          <div class="demo-chat-msgs" id="demoChatMsgs"></div>
+        </div>
+
+        <!-- FAB siempre visible -->
+        <div class="demo-fab" id="demoFab">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+        </div>
+        <div class="demo-touch-ring" id="demoTrFab" style="position:absolute;bottom:5px;right:5px;width:42px;height:42px;border-radius:50%;"></div>
+
+        <!-- CTA -->
+        <div class="demo-cta" id="demoCtaScreen">
+          <div style="font-size:10px;color:#818cf8;letter-spacing:1.5px;text-transform:uppercase;">Interactive Vitae</div>
+          <div class="demo-cta-title">More than a CV.<br><em>Your professional identity.</em></div>
+          <p style="font-size:11px;color:#94a3b8;text-align:center;">Let your profile speak for you.</p>
+          <button class="demo-cta-btn">Get yours today →</button>
+        </div>
+
+      </div>
+    </div>
+
+    <p class="demo-caption" id="demoCap"></p>
+  </section>
+
+
+  <!-- ============================================
        QUE BUSCAMOS
        ============================================ -->
   <section class="que-buscamos" id="que-buscamos">
@@ -542,5 +684,6 @@
 
 
   <script src="script.js"></script>
+  <script src="demo.js"></script>
 </body>
 </html>
