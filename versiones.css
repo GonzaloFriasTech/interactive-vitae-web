@@ -1,0 +1,475 @@
+/* ============================================
+   VERSIONES SECTION — versiones.css
+   ============================================ */
+
+/* ── Wrapper ─────────────────────────────── */
+#versiones {
+  background: #e8e0d5;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* ── Encabezado ──────────────────────────── */
+.ver-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #7a6e61;
+  margin-bottom: 8px;
+}
+
+.ver-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2rem;
+  color: #0f1f3d;
+  margin-bottom: 8px;
+}
+
+.ver-subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+}
+
+/* ── Grid ────────────────────────────────── */
+.ver-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+/* ── Cards ───────────────────────────────── */
+.ver-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e8e0d5;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  position: relative;
+}
+
+.ver-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ver-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(26, 47, 110, 0.12);
+}
+
+.ver-card--featured {
+  border: 2px solid #1a2f6e;
+  box-shadow: 0 8px 30px rgba(26, 47, 110, 0.14);
+}
+
+.ver-card--featured:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 50px rgba(26, 47, 110, 0.18);
+}
+
+/* ── Badge ───────────────────────────────── */
+.ver-badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a2f6e;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  padding: 4px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* ── Mini preview ────────────────────────── */
+.ver-preview {
+  background: #f0ece6;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.vp-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #1a2f6e;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.vp-avatar--lg {
+  width: 36px;
+  height: 36px;
+  font-size: 12px;
+}
+
+.vp-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: #0f1f3d;
+  margin: 0;
+}
+
+.vp-role {
+  font-size: 9px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.vp-chips {
+  display: flex;
+  gap: 4px;
+}
+
+.vp-chips span {
+  font-size: 8px;
+  background: #edf0f7;
+  color: #1a2f6e;
+  border-radius: 20px;
+  padding: 2px 6px;
+}
+
+.vp-lines {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 4px;
+}
+
+.vp-line-label {
+  font-size: 8px;
+  color: #94a3b8;
+  text-align: left;
+  margin-top: 4px;
+}
+
+.vp-line {
+  height: 4px;
+  background: #e2e8f0;
+  border-radius: 2px;
+  width: 100%;
+}
+
+.vp-line.short   { width: 70%; }
+.vp-line.shorter { width: 50%; }
+
+.vp-chatbubble {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #1a2f6e;
+  color: #fff;
+  font-size: 8px;
+  padding: 5px 8px;
+  border-radius: 8px 8px 0 8px;
+  max-width: 110px;
+  line-height: 1.4;
+}
+
+.vp-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  width: 100%;
+}
+
+.vp-premium-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 8px;
+  background: #edf0f7;
+  color: #1a2f6e;
+  padding: 2px 6px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* ── Card body ───────────────────────────── */
+.ver-card-body {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.ver-plan-name {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.25rem;
+  color: #0f1f3d;
+  margin: 0;
+  text-align: left;
+}
+
+.ver-price {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #6b7280;
+  text-align: left;
+}
+
+/* ── Features ────────────────────────────── */
+.ver-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.ver-features li {
+  font-size: 13px;
+  color: #374151;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.ver-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* ── Botones ─────────────────────────────── */
+.ver-btn {
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  cursor: pointer;
+}
+
+.ver-btn--outline {
+  border: 1.5px solid #1a2f6e;
+  color: #1a2f6e;
+  background: transparent;
+}
+
+.ver-btn--outline:hover {
+  background: #1a2f6e;
+  color: #fff;
+}
+
+.ver-btn--solid {
+  background: #1a2f6e;
+  color: #fff;
+  border: 1.5px solid #1a2f6e;
+}
+
+.ver-btn--solid:hover {
+  background: #2d4499;
+  border-color: #2d4499;
+}
+
+/* ── Preview Card 1 (CV Website) ────────── */
+.ver-preview--simple {
+  background: #e8e0d5;
+  border: 2px solid #d4ccc3;
+  padding: 12px;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0;
+  height: 190px;
+}
+
+.preview-inner {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 10px 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  overflow: hidden;
+  max-width: 85%;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.vp-header-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.vp-header-row .vp-avatar {
+  width: 32px;
+  height: 32px;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.vp-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.vp-chips-row {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+
+.vp-chips-row span {
+  font-size: 8px;
+  background: #edf0f7;
+  color: #1a2f6e;
+  border-radius: 20px;
+  padding: 2px 6px;
+}
+
+.vp-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.vp-sec-head {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 9px;
+  font-weight: 600;
+  color: #1a2f6e;
+}
+
+.vp-sec-icon { font-size: 9px; }
+
+.vp-sec-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-left: 2px;
+}
+
+.vp-sec-lines .vp-line { height: 4px; }
+
+.vp-skills-row {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding-left: 2px;
+}
+
+.vp-skills-row .vp-line {
+  height: 4px;
+  flex-shrink: 0;
+}
+
+.vp-contact-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding-left: 2px;
+  font-size: 10px;
+  color: #6b7280;
+}
+
+.vp-chatbubble {
+  transition: opacity 0.4s ease;
+}
+
+/* ── Card 2 — chat messages ─────────────── */
+.vp-msg { font-size:8px; padding:4px 7px; border-radius:8px; max-width:85%; line-height:1.4; margin:0; }
+.vp-msg.human { background:#1a2f6e; color:#fff; align-self:flex-end; border-radius:8px 8px 0 8px; }
+.vp-msg.bot { background:#f1f5f9; color:#0f1f3d; align-self:flex-start; border-radius:8px 8px 8px 0; }
+#vp2chat .vp-msg.human { margin-left: auto !important; }
+#vp2chat .vp-msg.bot { margin-right: auto !important; }
+
+/* ── Card 3 — profile badge ──────────────── */
+.ver3-badge {
+  display: inline-block;
+  font-size: 8px;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  padding: 3px 8px;
+  border-radius: 20px;
+  color: #fff;
+  align-self: flex-start;
+  margin-bottom: 4px;
+}
+
+/* ── Card 3 — caption below preview ─────── */
+.ver-preview-caption {
+  font-size: 11px;
+  color: #6b7280;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── Card 2 — chat flotante sobre preview ── */
+[data-card="2"] .preview-inner {
+  position: relative;
+  overflow: visible;
+}
+
+#vp2chat {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+/* ── Responsive ──────────────────────────── */
+@media (max-width: 768px) {
+  .ver-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+
+  #versiones {
+    padding: 60px 16px;
+  }
+
+  .ver-title {
+    font-size: 1.6rem;
+  }
+}
