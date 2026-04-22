@@ -35,53 +35,57 @@
     card.style.transitionDelay = (i * 0.12) + 's';
     observer.observe(card);
   });
-
-  // ── Card 3 profile rotation ──
-  const card3Inner = document.querySelector('[data-card="3"] .preview-inner');
-  if (card3Inner) {
-    const badge3 = document.getElementById('ver3Badge');
-    const chips3 = document.getElementById('ver3Chips');
-    const profiles = [
-      { badge: '✦ Startup',   bg: '#6366f1', chips: ['React', 'AWS', 'Docker'],       chipBg: '#ede9fe', chipColor: '#5b21b6', lineBg: '#c4b5fd' },
-      { badge: '◆ Corporate', bg: '#1a2f6e', chips: ['Strategy', 'Finance', 'PMO'],   chipBg: '#edf0f7', chipColor: '#1a2f6e', lineBg: '#bfdbfe' },
-      { badge: '● Creative',  bg: '#0f766e', chips: ['Branding', 'UX', 'Motion'],     chipBg: '#ccfbf1', chipColor: '#0f766e', lineBg: '#99f6e4' }
-    ];
-    let p3idx = 0;
-
-    function applyProfile3(p) {
-      badge3.textContent      = p.badge;
-      badge3.style.background = p.bg;
-      chips3.querySelectorAll('span').forEach((s, i) => {
-        s.textContent      = p.chips[i];
-        s.style.background = p.chipBg;
-        s.style.color      = p.chipColor;
-      });
-      card3Inner.querySelectorAll('.vp-line').forEach(l => {
-        l.style.background = p.lineBg;
-      });
-    }
-
-    function nextProfile3() {
-      card3Inner.style.opacity = '0';
-      setTimeout(() => {
-        p3idx = (p3idx + 1) % profiles.length;
-        applyProfile3(profiles[p3idx]);
-        card3Inner.style.opacity = '1';
-      }, 300);
-    }
-
-    card3Inner.style.transition = 'opacity 0.3s ease';
-    applyProfile3(profiles[0]);
-    setInterval(nextProfile3, 2500);
-  }
 })();
+
+function startChat1() {
+  var box = document.getElementById('vp1chat');
+  if (!box) return;
+  var convos = [
+    { q: 'Is Gonzalo a good fit for Sales?', a: 'Yes! 5+ years in B2B and LATAM expansion.' },
+    { q: "What's his biggest strength?",     a: 'Strategic client management and cross-functional leadership.' }
+  ];
+  var i = 0;
+
+  function showGreeting(cb) {
+    box.innerHTML = '';
+    var g = document.createElement('p');
+    g.className = 'vp-msg bot';
+    g.textContent = 'Hi! How can I help you?';
+    box.appendChild(g);
+    setTimeout(cb, 1500);
+  }
+
+  function showConvo() {
+    box.innerHTML = '';
+    var q = document.createElement('p');
+    q.className = 'vp-msg human';
+    q.textContent = convos[i].q;
+    box.appendChild(q);
+    setTimeout(function() {
+      var a = document.createElement('p');
+      a.className = 'vp-msg bot';
+      a.textContent = convos[i].a;
+      box.appendChild(a);
+      i = (i + 1) % convos.length;
+      setTimeout(function() {
+        if (i === 0) {
+          showGreeting(showConvo);
+        } else {
+          showConvo();
+        }
+      }, 2500);
+    }, 1200);
+  }
+
+  showGreeting(showConvo);
+}
 
 function startChat2() {
   var box = document.getElementById('vp2chat');
   if (!box) return;
   var convos = [
-    { q: 'Is Juan fit for DevOps?',     a: 'Yes! 5+ years cloud infra.' },
-    { q: "What's his top achievement?", a: 'Grew product 3x in 6 months.' }
+    { q: 'Is Manuel a good fit for trading roles?', a: 'Yes! Strong background in financial markets and international client management.' },
+    { q: "What's his academic background?",         a: 'Master en Finanzas with hands-on experience in cross-asset sales at StoneX.' }
   ];
   var i = 0;
 
@@ -120,5 +124,6 @@ function startChat2() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+  startChat1();
   startChat2();
 });

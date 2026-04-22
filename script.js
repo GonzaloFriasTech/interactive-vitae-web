@@ -116,7 +116,7 @@ const translations = {
 
     'contacto.label': 'Contacto',
     'contacto.title': 'Empezá a construir<br /><em>tu presencia</em>',
-    'contacto.subtitle': 'Si te interesa contar con un perfil profesional, inteligente y digital, contactanos.',
+    'contacto.subtitle': 'Si querés digitalizar tu CV y llevarlo a un formato hecho a tu medida, no dudes en contactarnos para agendar una reunión.',
     'contacto.quote': '"La mayoría de los profesionales tienen carreras increíbles. Solo les falta la forma correcta de mostrarlas."',
     'contacto.form.nombre-label': 'Nombre completo',
     'contacto.form.nombre-placeholder': 'Tu nombre',
@@ -204,7 +204,7 @@ const translations = {
 
     'contacto.label': 'Contact',
     'contacto.title': 'Start building<br /><em>your presence</em>',
-    'contacto.subtitle': 'If you\'re interested in having a professional, intelligent and digital profile, contact us.',
+    'contacto.subtitle': 'If you want to digitalize your CV and take it to a format made just for you, don\'t hesitate to contact us to schedule a meeting.',
     'contacto.quote': '"Most professionals have incredible careers. They just need the right way to show them."',
     'contacto.form.nombre-label': 'Full name',
     'contacto.form.nombre-placeholder': 'Your name',

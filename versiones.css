@@ -328,6 +328,7 @@
   max-width: 85%;
   width: 85%;
   margin: 0 auto;
+  position: relative;
 }
 
 .vp-header-row {
@@ -447,7 +448,8 @@
 /* ── Card 2 — chat flotante sobre preview ── */
 [data-card="2"] .preview-inner {
   position: relative;
-  overflow: visible;
+  overflow: hidden;
+  height: 162px;
 }
 
 #vp2chat {
@@ -472,4 +474,35 @@
   .ver-title {
     font-size: 1.6rem;
   }
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+[data-card="3"] .ver-preview img {
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes cursorClick {
+  0%   { transform: translate(20px, -20px) scale(1); opacity: 0; }
+  30%  { transform: translate(0px, 0px) scale(1); opacity: 1; }
+  60%  { transform: translate(0px, 0px) scale(0.85); opacity: 1; }
+  75%  { transform: translate(0px, 0px) scale(1); opacity: 1; }
+  100% { transform: translate(0px, 0px) scale(1); opacity: 0; }
+}
+
+[data-card="3"] #cursorAnim {
+  animation: cursorClick 2.5s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 40%  { opacity: 0; }
+  60%, 85% { opacity: 1; }
+  100%     { opacity: 0; }
+}
+
+[data-card="3"] #contactanos-txt {
+  animation: fadeInOut 2.5s ease-in-out infinite;
 }
