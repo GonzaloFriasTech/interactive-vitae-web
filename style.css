@@ -1574,3 +1574,12 @@ a.caso-card:hover {
 }
 
 #demo { display: none; }
+
+@keyframes casoPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.caso-proximamente {
+  animation: casoPulse 1.8s ease-in-out infinite;
+}

@@ -196,3 +196,13 @@ a.com-card:hover {
     font-size: 1.3rem;
   }
 }
+
+@keyframes pillPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.com-pill[disabled] {
+  animation: pillPulse 1.8s ease-in-out infinite;
+  cursor: default;
+}
