@@ -605,6 +605,241 @@
 
 
   <!-- ============================================
+       FEATURES / DEMO
+       ============================================ -->
+  <section id="features">
+    <div class="container">
+
+      <!-- Encabezado -->
+      <p class="feat-eyebrow">INTERACTIVE VITAE</p>
+      <h2 class="feat-title" data-es="Tu perfil puede lucir así" data-en="Your profile could look like this">Tu perfil puede lucir así</h2>
+
+      <!-- Browser Mockup -->
+      <div class="features-browser">
+        <!-- Browser bar -->
+        <div class="fb-bar">
+          <div class="fb-dots">
+            <span class="fb-dot fb-dot--red"></span>
+            <span class="fb-dot fb-dot--yellow"></span>
+            <span class="fb-dot fb-dot--green"></span>
+          </div>
+          <div class="fb-url">https://juanperez.interactivevitae.com</div>
+          <div style="width:52px;"></div>
+        </div>
+        <!-- Navbar interno -->
+        <div class="fb-nav">
+          <div class="fb-logo">
+            <span class="fb-logo-tri">▼</span>
+            <span class="fb-logo-text">INTERACTIVEVITAE</span>
+          </div>
+          <div class="fb-nav-links">
+            <span>PERFIL</span>
+            <span>EXPERIENCIA</span>
+            <span>SOBRE MÍ</span>
+            <span>CONTACTO</span>
+          </div>
+          <div class="fb-nav-btn">🚀</div>
+        </div>
+        <!-- Hero: dos columnas -->
+        <div class="features-hero">
+          <!-- Columna izquierda -->
+          <div class="features-left">
+            <img src="foto-perez.png" alt="Juan Perez" class="feat-photo" />
+            <h3 class="feat-name">Juan Perez</h3>
+            <p class="feat-role">Software Developer</p>
+            <p class="feat-location">📍 Buenos Aires, Argentina</p>
+            <p class="feat-desc">Desarrollador enfocado en crear experiencias digitales eficientes, escalables y centradas en el usuario.</p>
+            <div class="feat-socials">
+              <span class="feat-social">GH</span>
+              <span class="feat-social">in</span>
+              <span class="feat-social">✉</span>
+              <span class="feat-social">↓</span>
+            </div>
+          </div>
+          <!-- Columna derecha: canvas red neuronal -->
+          <div class="features-right">
+            <canvas id="neuralCanvas"></canvas>
+          </div>
+          <!-- Botones flotantes -->
+          <div class="feat-float-btns">
+            <button class="feat-guide-btn">🧭 Guide Tour</button>
+            <button class="feat-chat-btn">💬</button>
+          </div>
+          <!-- Dots navegación vertical -->
+          <div class="feat-nav-dots">
+            <span class="feat-ndot feat-ndot--active"></span>
+            <span class="feat-ndot"></span>
+            <span class="feat-ndot"></span>
+            <span class="feat-ndot"></span>
+            <span class="feat-ndot"></span>
+            <span class="feat-ndot"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid de 6 features -->
+      <div class="features-grid">
+
+        <!-- Card 1: Perfil -->
+        <div class="feature-card">
+          <div class="feat-icon feat-icon--navy">👤</div>
+          <h3 class="feat-card-title" data-es="1. PERFIL" data-en="1. PROFILE">1. PERFIL</h3>
+          <p class="feat-card-desc" data-es="Presenta tu identidad profesional de forma clara y visual." data-en="Present your professional identity clearly and visually.">Presenta tu identidad profesional de forma clara y visual.</p>
+          <ul class="feat-list">
+            <li data-es="Foto de perfil" data-en="Profile photo">Foto de perfil</li>
+            <li data-es="Nombre y puesto" data-en="Name and position">Nombre y puesto</li>
+            <li data-es="Resumen profesional" data-en="Professional summary">Resumen profesional</li>
+            <li data-es="Ubicación" data-en="Location">Ubicación</li>
+            <li data-es="Redes sociales" data-en="Social networks">Redes sociales</li>
+            <li data-es="Botón de descarga de CV" data-en="CV download button">Botón de descarga de CV</li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Experiencias -->
+        <div class="feature-card">
+          <div class="feat-icon feat-icon--navy">💼</div>
+          <h3 class="feat-card-title" data-es="2. EXPERIENCIAS" data-en="2. EXPERIENCE">2. EXPERIENCIAS</h3>
+          <p class="feat-card-desc" data-es="Muestra tu trayectoria laboral de manera ordenada y atractiva." data-en="Showcase your career path in an organized and attractive way.">Muestra tu trayectoria laboral de manera ordenada y atractiva.</p>
+          <ul class="feat-list">
+            <li data-es="Cargos y empresas" data-en="Roles and companies">Cargos y empresas</li>
+            <li data-es="Fechas de inicio y fin" data-en="Start and end dates">Fechas de inicio y fin</li>
+            <li data-es="Descripción de funciones" data-en="Job description">Descripción de funciones</li>
+            <li data-es="Logros destacados" data-en="Key achievements">Logros destacados</li>
+            <li data-es="Orden cronológico" data-en="Chronological order">Orden cronológico</li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Sobre mí -->
+        <div class="feature-card">
+          <div class="feat-icon feat-icon--navy">🪪</div>
+          <h3 class="feat-card-title" data-es="3. SOBRE MÍ" data-en="3. ABOUT ME">3. SOBRE MÍ</h3>
+          <p class="feat-card-desc" data-es="Cuenta tu historia y destaca tus habilidades y valores." data-en="Tell your story and highlight your skills and values.">Cuenta tu historia y destaca tus habilidades y valores.</p>
+          <ul class="feat-list">
+            <li data-es="Biografía personal" data-en="Personal biography">Biografía personal</li>
+            <li data-es="Habilidades técnicas" data-en="Technical skills">Habilidades técnicas</li>
+            <li data-es="Soft skills" data-en="Soft skills">Soft skills</li>
+            <li data-es="Formación académica" data-en="Academic background">Formación académica</li>
+            <li data-es="Pasiones e intereses" data-en="Passions and interests">Pasiones e intereses</li>
+          </ul>
+        </div>
+
+        <!-- Card 4: Contacto -->
+        <div class="feature-card">
+          <div class="feat-icon feat-icon--navy">✉️</div>
+          <h3 class="feat-card-title" data-es="4. CONTACTO" data-en="4. CONTACT">4. CONTACTO</h3>
+          <p class="feat-card-desc" data-es="Facilita que te contacten de forma directa." data-en="Make it easy for people to reach you directly.">Facilita que te contacten de forma directa.</p>
+          <ul class="feat-list">
+            <li data-es="Formulario de contacto" data-en="Contact form">Formulario de contacto</li>
+            <li data-es="Email directo" data-en="Direct email">Email directo</li>
+            <li data-es="Teléfono (opcional)" data-en="Phone (optional)">Teléfono (opcional)</li>
+            <li data-es="Ubicación" data-en="Location">Ubicación</li>
+            <li data-es="Enlaces a redes" data-en="Social links">Enlaces a redes</li>
+          </ul>
+        </div>
+
+        <!-- Card 5: Guide Tour -->
+        <div class="feature-card">
+          <div class="feat-icon feat-icon--blue">🧭</div>
+          <h3 class="feat-card-title">5. GUIDE TOUR <span class="feature-badge">¡NUEVO!</span></h3>
+          <p class="feat-card-desc" data-es="Un recorrido guiado que presenta tu CV sección por sección." data-en="A guided tour that presents your CV section by section.">Un recorrido guiado que presenta tu CV sección por sección.</p>
+          <ul class="feat-list">
+            <li data-es="Explica cada sección" data-en="Explains each section">Explica cada sección</li>
+            <li data-es="Destaca tu valor profesional" data-en="Highlights your professional value">Destaca tu valor profesional</li>
+            <li data-es="Mejora la experiencia del reclutador" data-en="Improves recruiter experience">Mejora la experiencia del reclutador</li>
+            <li data-es="Botón flotante siempre disponible" data-en="Floating button always available">Botón flotante siempre disponible</li>
+          </ul>
+        </div>
+
+        <!-- Card 6: Chatbot IA -->
+        <div class="feature-card">
+          <div class="feat-icon feat-icon--blue">💬</div>
+          <h3 class="feat-card-title">6. CHATBOT IA <span class="feature-badge">¡NUEVO!</span></h3>
+          <p class="feat-card-desc" data-es="Un asistente inteligente entrenado para responder por vos." data-en="An intelligent assistant trained to answer on your behalf.">Un asistente inteligente entrenado para responder por vos.</p>
+          <ul class="feat-list">
+            <li data-es="FAQ personalizadas" data-en="Personalized FAQ">FAQ personalizadas</li>
+            <li data-es="Responde sobre tu experiencia y proyectos" data-en="Answers about your experience and projects">Responde sobre tu experiencia y proyectos</li>
+            <li data-es="IA entrenada con tu información" data-en="AI trained with your information">IA entrenada con tu información</li>
+            <li data-es="Disponible 24/7" data-en="Available 24/7">Disponible 24/7</li>
+          </ul>
+        </div>
+
+      </div><!-- /features-grid -->
+
+
+    </div>
+  </section>
+
+  <!-- Script canvas red neuronal del mockup -->
+  <script>
+(function () {
+  var canvas = document.getElementById('neuralCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+
+  function resize() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var NUM_POINTS = 22;
+  var MAX_DIST = 130;
+  var points = [];
+
+  for (var i = 0; i < NUM_POINTS; i++) {
+    points.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5,
+      r: Math.random() * 1.5 + 1.5
+    });
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (var i = 0; i < points.length; i++) {
+      var p = points[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+    }
+
+    for (var i = 0; i < points.length; i++) {
+      for (var j = i + 1; j < points.length; j++) {
+        var dx = points[i].x - points[j].x;
+        var dy = points[i].y - points[j].y;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < MAX_DIST) {
+          var alpha = (1 - dist / MAX_DIST) * 0.5;
+          ctx.beginPath();
+          ctx.strokeStyle = 'rgba(100,160,255,' + alpha + ')';
+          ctx.lineWidth = 0.8;
+          ctx.moveTo(points[i].x, points[i].y);
+          ctx.lineTo(points[j].x, points[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    for (var i = 0; i < points.length; i++) {
+      ctx.beginPath();
+      ctx.arc(points[i].x, points[i].y, points[i].r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.85)';
+      ctx.fill();
+    }
+
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+  </script>
+
+
+  <!-- ============================================
        CASOS DE EXITO
        ============================================ -->
   <section class="casos" id="casos">
@@ -682,7 +917,17 @@
               <p class="caso-empresa">UBA</p>
             </a>
 
-            <!-- Card 7: Placeholder -->
+            <!-- Card 7: María Merello -->
+            <a href="https://merellom.netlify.app/" target="_blank" rel="noopener noreferrer" class="caso-card">
+              <div class="caso-photo-wrap">
+                <img src="foto-merello.jpg" alt="María Merello" class="caso-photo" />
+              </div>
+              <h3 class="caso-name">María Merello</h3>
+              <p class="caso-role">Senior Analyst, NJX Learning Delivery</p>
+              <p class="caso-empresa">Accenture</p>
+            </a>
+
+            <!-- Card 8: Placeholder -->
             <div class="caso-card caso-card--placeholder" style="cursor:pointer" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
               <div class="caso-photo-wrap">
                 <div class="caso-photo-placeholder">?</div>
