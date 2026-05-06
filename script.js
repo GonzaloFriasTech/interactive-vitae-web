@@ -72,7 +72,7 @@ const translations = {
     'nav.cta': 'Quiero el mío',
 
     'hero.badge': 'Potenciado por Inteligencia Artificial',
-    'hero.title': 'Your career reimagined',
+    'hero.title': 'CVs interactivos con IA para profesionales',
     'hero.subtitle': 'Tu perfil no debería ser un documento. Debería ser una experiencia. Creamos CVs interactivos con IA que presentan tu carrera de una manera que los reclutadores no pueden ignorar.',
     'hero.btn-primary': 'Quiero mi CV interactivo',
     'hero.btn-outline': 'Ver ejemplos',
